@@ -1,0 +1,9 @@
+source: ./src
+destination: ./site
+lsi:         true
+pygments:    true
+markdown:    maruku
+permalink:   date
+auto: true
+server: true
+server_port: 4100

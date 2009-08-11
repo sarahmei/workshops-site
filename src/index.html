@@ -1,0 +1,61 @@
+---
+title: Home
+layout: application
+---
+<h1>RailsBridge Open Workshop</h1>
+<p><b>Mission:</b> enabling Rails developers everywhere to organize and present high-quality Rails workshops.</p>
+</div>
+
+<div id='left'>
+<h2>Explore:</h2>
+<ul>
+  <li>
+    <a href="lessons.html">Lessons</a>
+  </li>
+  <li>
+    <a href="languages.html">Languages</a>
+  </li>
+  <li>
+    <a href="resources.html">Resources</a>
+  </li>
+</ul>
+<h2>Blog</h2>
+<ul class="posts">
+{% for post in site.posts %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+<h2>Links</h2>
+<ul>
+  <li>
+    <a href="http://www.csta.acm.org/">CSTA</a>
+  </li>
+  <li>
+    <a href="http://www.iste.org/">ISTE</a>
+  </li>
+</ul>
+<h2>Who are we?</h2>
+<ul>
+  <li>
+    <a href="contributors.html">Contributors</a>
+  </li>
+  <li>
+    <a href="http://railsbridge.org/">RailsBridge</a>
+  </li>
+</ul>
+</div>
+<div id='right'>
+<h2>Latest News</h2>
+<div class="posts">
+          {% for post in site.posts limit:1 %}
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p>{{ post.content }}</p>
+          {% endfor %}
+</div>
+</div>
+
+<div class='clear'></div>
+<div id='bottom'></div>
+<p>
+<a href="http://railsbridge.org">Main RailsBridge Site</a>
+</p>
